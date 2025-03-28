@@ -37,6 +37,8 @@ model1 <- lm(charges ~ age + sex + bmi + children + smoker + region,
 
 summary(model1)
 class(model1)
+
+class(medical_insurance)
 ```
 
 
