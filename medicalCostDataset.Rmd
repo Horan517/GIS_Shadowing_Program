@@ -1,0 +1,47 @@
+---
+title: "medicalCostDataset"
+output: html_document
+date: "2025-03-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+---
+
+```{r}
+
+medical_insurance = read.csv("Datasets/insurance.csv")
+
+
+summary(medical_insurance)
+
+```
+```{r}
+# 'as.factor' counts how many character types there are
+medical_insurance$region <- as.factor(medical_insurance$region)
+# Dollar mark means column in a dataset/csv file
+medical_insurance$sex <- as.factor(medical_insurance$sex)
+medical_insurance$smoker <- as.factor(medical_insurance$smoker)
+
+# Prints out summary
+summary(medical_insurance)
+# Prints out type of variable
+class(medical_insurance$bmi)
+
+```
+```{r}
+model1 <- lm(charges ~ age + sex + bmi + children + smoker + region,
+             data = medical_insurance)
+
+summary(model1)
+class(model1)
+
+mean_smoking_yes <- mean(medical_insurance$charges if medical_insurance$smoker == "yes""))
+```
+```{r}
+
+```
+
+
