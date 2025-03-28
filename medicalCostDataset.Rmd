@@ -39,6 +39,7 @@ summary(model1)
 class(model1)
 
 class(medical_insurance)
+class(medical_insurance$age)
 ```
 
 
