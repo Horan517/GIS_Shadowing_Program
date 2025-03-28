@@ -17,6 +17,8 @@ medical_insurance = read.csv("Datasets/insurance.csv")
 
 summary(medical_insurance)
 
+
+head(medical_insurance)
 ```
 ```{r}
 # 'as.factor' counts how many character types there are
