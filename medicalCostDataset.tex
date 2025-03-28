@@ -1,0 +1,246 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={medicalCostDataset},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{medicalCostDataset}
+\author{}
+\date{\vspace{-2.5em}2025-03-21}
+
+\begin{document}
+\maketitle
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{medical\_insurance }\OtherTok{=} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"Datasets/insurance.csv"}\NormalTok{)}
+\FunctionTok{summary}\NormalTok{(medical\_insurance)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       age            sex                 bmi           children    
+##  Min.   :18.00   Length:1338        Min.   :15.96   Min.   :0.000  
+##  1st Qu.:27.00   Class :character   1st Qu.:26.30   1st Qu.:0.000  
+##  Median :39.00   Mode  :character   Median :30.40   Median :1.000  
+##  Mean   :39.21                      Mean   :30.66   Mean   :1.095  
+##  3rd Qu.:51.00                      3rd Qu.:34.69   3rd Qu.:2.000  
+##  Max.   :64.00                      Max.   :53.13   Max.   :5.000  
+##     smoker             region             charges     
+##  Length:1338        Length:1338        Min.   : 1122  
+##  Class :character   Class :character   1st Qu.: 4740  
+##  Mode  :character   Mode  :character   Median : 9382  
+##                                        Mean   :13270  
+##                                        3rd Qu.:16640  
+##                                        Max.   :63770
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(medical\_insurance)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   age    sex    bmi children smoker    region   charges
+## 1  19 female 27.900        0    yes southwest 16884.924
+## 2  18   male 33.770        1     no southeast  1725.552
+## 3  28   male 33.000        3     no southeast  4449.462
+## 4  33   male 22.705        0     no northwest 21984.471
+## 5  32   male 28.880        0     no northwest  3866.855
+## 6  31 female 25.740        0     no southeast  3756.622
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# \textquotesingle{}as.factor\textquotesingle{} counts how many character types there are}
+\NormalTok{medical\_insurance}\SpecialCharTok{$}\NormalTok{region }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(medical\_insurance}\SpecialCharTok{$}\NormalTok{region)}
+\CommentTok{\# Dollar mark means column in a dataset/csv file}
+\NormalTok{medical\_insurance}\SpecialCharTok{$}\NormalTok{sex }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(medical\_insurance}\SpecialCharTok{$}\NormalTok{sex)}
+\NormalTok{medical\_insurance}\SpecialCharTok{$}\NormalTok{smoker }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(medical\_insurance}\SpecialCharTok{$}\NormalTok{smoker)}
+
+\CommentTok{\# Prints out summary}
+\FunctionTok{summary}\NormalTok{(medical\_insurance)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       age            sex           bmi           children     smoker    
+##  Min.   :18.00   female:662   Min.   :15.96   Min.   :0.000   no :1064  
+##  1st Qu.:27.00   male  :676   1st Qu.:26.30   1st Qu.:0.000   yes: 274  
+##  Median :39.00                Median :30.40   Median :1.000             
+##  Mean   :39.21                Mean   :30.66   Mean   :1.095             
+##  3rd Qu.:51.00                3rd Qu.:34.69   3rd Qu.:2.000             
+##  Max.   :64.00                Max.   :53.13   Max.   :5.000             
+##        region       charges     
+##  northeast:324   Min.   : 1122  
+##  northwest:325   1st Qu.: 4740  
+##  southeast:364   Median : 9382  
+##  southwest:325   Mean   :13270  
+##                  3rd Qu.:16640  
+##                  Max.   :63770
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Prints out type of variable}
+\FunctionTok{class}\NormalTok{(medical\_insurance}\SpecialCharTok{$}\NormalTok{bmi)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "numeric"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{model1 }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(charges }\SpecialCharTok{\textasciitilde{}}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ sex }\SpecialCharTok{+}\NormalTok{ bmi }\SpecialCharTok{+}\NormalTok{ children }\SpecialCharTok{+}\NormalTok{ smoker }\SpecialCharTok{+}\NormalTok{ region,}
+             \AttributeTok{data =}\NormalTok{ medical\_insurance)}
+
+\FunctionTok{summary}\NormalTok{(model1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = charges ~ age + sex + bmi + children + smoker + 
+##     region, data = medical_insurance)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -11304.9  -2848.1   -982.1   1393.9  29992.8 
+## 
+## Coefficients:
+##                 Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)     -11938.5      987.8 -12.086  < 2e-16 ***
+## age                256.9       11.9  21.587  < 2e-16 ***
+## sexmale           -131.3      332.9  -0.394 0.693348    
+## bmi                339.2       28.6  11.860  < 2e-16 ***
+## children           475.5      137.8   3.451 0.000577 ***
+## smokeryes        23848.5      413.1  57.723  < 2e-16 ***
+## regionnorthwest   -353.0      476.3  -0.741 0.458769    
+## regionsoutheast  -1035.0      478.7  -2.162 0.030782 *  
+## regionsouthwest   -960.0      477.9  -2.009 0.044765 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 6062 on 1329 degrees of freedom
+## Multiple R-squared:  0.7509, Adjusted R-squared:  0.7494 
+## F-statistic: 500.8 on 8 and 1329 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(model1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "lm"
+\end{verbatim}
+
+\end{document}
