@@ -1,0 +1,254 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Learning-R},
+  pdfauthor={Jino Surendra},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Learning-R}
+\author{Jino Surendra}
+\date{2025-04-04}
+
+\begin{document}
+\maketitle
+
+This is an activity created by Dr.~Antonio Paez, from his Session 2
+Notes.
+
+\section{My Goal to Become an Internal
+Doctor}\label{my-goal-to-become-an-internal-doctor}
+
+\emph{The following is an AI-created (ChatGPT by OpenAI) and
+human-refined paragraph.}
+
+I'm finishing my first year of university as a \textbf{Life Sciences
+student}, and I've become really motivated to pursue a career in
+\textbf{internal medicine}. This year, I've taken courses like:
+
+\begin{itemize}
+\tightlist
+\item
+  BIO 1A03
+\item
+  CHEM 1A03 and CHEM 1AA3
+\item
+  PHYSICS 1A03
+\item
+  MATH 1LS3
+\end{itemize}
+
+These courses helped me understand \emph{how the body works}, and it
+made me realize how much I \emph{enjoy learning about health and
+disease}. What I like most about internal medicine is how doctors work
+with \emph{adult patients} to figure out what's going on when
+something's wrong and help manage long-term conditions. I think it's
+amazing how they \textbf{use both science and problem-solving} to help
+people feel better and stay healthy. I also like that internal medicine
+doctors get to build strong relationships with their patients over time.
+I want to be someone who \textbf{listens, understands, and makes a real
+difference in people's lives}. As I continue through university, I plan
+to get involved in \emph{volunteering, research, and maybe even shadow
+doctors} so I can learn more about the field and prepare for medical
+school. Becoming a doctor is a \textbf{big goal}, but it's one that
+feels right for me, and I'm excited to keep working toward it.
+
+\section{Favorites}\label{favorites}
+
+\subsection{Favorite Music}\label{favorite-music}
+
+Below are a list of my \textbf{favorite songs} at the moment:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Joro - \emph{Wizkid}
+\item
+  Don't Go Breaking My Heart - \emph{Elton John, Kiki Dee}
+\item
+  GOOD CREDIT - \emph{Playboi Carti feat. Kendrick Lamar}
+\item
+  Magic Don Juan (Princess Diana) - \emph{Metro Boomin, Future}
+\item
+  Fight For Your Right - \emph{Beastie Boys}
+\end{enumerate}
+
+As you can see, I listen to pretty much any music that has been
+released.
+
+\subsection{Favorite Equation}\label{favorite-equation}
+
+My favorite equation, I would say in my life, is the plain and simple
+Einstein's mass-energy equivalence formula: \(E = mc^2\).
+
+When I was young, I always looked at this equation as a super complex
+equation that only the best of scientists knew how to use. But, when I
+got to Grade 11, I learned how simple it is, how easy it is to apply and
+use when needed.
+
+\subsection{Favorite Artists}\label{favorite-artists}
+
+Below is a table of my favorite artists along with one of their most
+notable achievements:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Artist Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Achievement
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Metro Boomin & Best Rap Song (\emph{2024}) \\
+21 Savage & Album of The Year (\emph{2024}) \\
+Post Malone & Best Country Album (\emph{2025}) \\
+Young Thug & Best Rap Performance (\emph{2023}) \\
+WizKid & Songwriter for First Song to Reach 1,000,000,000 Streams on
+Spotify \\
+\end{longtable}
+
+\section{A Chunk of Code}\label{a-chunk-of-code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Below is a chunk of code that plots out a graph of y = 2\^{}x.}
+
+\CommentTok{\# Define x values (5 points).}
+\CommentTok{\# 0 is counted as the first value in R.}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{)}
+
+\CommentTok{\# Caclulate y = 2\^{}x.}
+\NormalTok{y }\OtherTok{\textless{}{-}} \DecValTok{2}\SpecialCharTok{\^{}}\NormalTok{x}
+
+\CommentTok{\# Plot the points}
+\CommentTok{\# Type "b" refers to the type of graph, this connects the points and shows dots.}
+\CommentTok{\# Color can also be chosen, as purple is my favorite color, I have chosen it.}
+\CommentTok{\# Expression refers to the title which currently shows the equation of the graph.}
+\FunctionTok{plot}\NormalTok{(x, y, }\AttributeTok{type =} \StringTok{"b"}\NormalTok{, }\AttributeTok{col =} \StringTok{"purple"}\NormalTok{, }\AttributeTok{pch =} \DecValTok{20}\NormalTok{,}
+     \AttributeTok{main =} \FunctionTok{expression}\NormalTok{(y }\SpecialCharTok{==} \DecValTok{2}\SpecialCharTok{\^{}}\NormalTok{x),}
+     \AttributeTok{xlab =} \StringTok{"x"}\NormalTok{, }\AttributeTok{ylab =} \StringTok{"y"}\NormalTok{)}
+
+\CommentTok{\# Adds grid lines to the graph for clarity}
+\FunctionTok{grid}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Your-Last-Name-Activity-1_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\end{document}

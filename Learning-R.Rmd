@@ -1,0 +1,89 @@
+---
+title: "Learning - R"
+author: Jino Surendra
+output:
+  pdf_document: default
+  html_document: default
+date: "2025-04-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+This is an activity created by Dr. Antonio Paez, from his Session 2 Notes.
+
+# My Goal to Become an Internal Doctor
+
+*The following is an AI-created (ChatGPT by OpenAI) and human-refined paragraph.*
+
+I’m finishing my first year of university as a **Life Sciences student**, and I’ve become really motivated to pursue a career in **internal medicine**. This year, I’ve taken courses like:
+
+- BIO 1A03
+- CHEM 1A03 and CHEM 1AA3
+- PHYSICS 1A03
+- MATH 1LS3
+
+These courses helped me understand *how the body works*, and it made me realize how much I *enjoy learning about health and disease*. What I like most about internal medicine is how doctors work with *adult patients* to figure out what’s going on when something’s wrong and help manage long-term conditions. I think it’s amazing how they **use both science and problem-solving** to help people feel better and stay healthy. I also like that internal medicine doctors get to build strong relationships with their patients over time. I want to be someone who **listens, understands, and makes a real difference in people’s lives**. As I continue through university, I plan to get involved in *volunteering, research, and maybe even shadow doctors* so I can learn more about the field and prepare for medical school. Becoming a doctor is a **big goal**, but it’s one that feels right for me, and I’m excited to keep working toward it.
+
+# Favorites
+
+## Favorite Music
+
+Below are a list of my **favorite songs** at the moment:
+
+1. Joro - *Wizkid*
+2. Don't Go Breaking My Heart - *Elton John, Kiki Dee*
+3. GOOD CREDIT - *Playboi Carti feat. Kendrick Lamar*
+4. Magic Don Juan (Princess Diana) - *Metro Boomin, Future*
+5. Fight For Your Right - *Beastie Boys*
+
+As you can see, I listen to pretty much any music that has been released.
+
+## Favorite Equation
+
+My favorite equation, I would say in my life, is the plain and simple Einstein’s mass-energy equivalence formula: $E = mc^2$. 
+
+When I was young, I always looked at this equation as a super complex equation that only the best of scientists knew how to use. But, when I got to Grade 11, I learned how simple it is, how easy it is to apply and use when needed.
+
+## Favorite Artists
+
+Below is a table of my favorite artists along with one of their most notable achievements:
+
+Artist Name | Achievement
+- | -
+Metro Boomin | Best Rap Song (*2024*)
+21 Savage | Album of The Year (*2024*)
+Post Malone | Best Country Album (*2025*)
+Young Thug | Best Rap Performance (*2023*)
+WizKid | Songwriter for First Song to Reach 1,000,000,000 Streams on Spotify
+
+# A Chunk of Code
+
+```{r demonstration of equations, results="hide"}
+
+# Below is a chunk of code that plots out a graph of y = 2^x.
+
+# Define x values (5 points).
+# 0 is counted as the first value in R.
+x <- c(0, 1, 2, 3, 4)
+
+# Caclulate y = 2^x.
+y <- 2^x
+
+# Plot the points
+# Type "b" refers to the type of graph, this connects the points and shows dots.
+# Color can also be chosen, I chose purple as it is my favorite color.
+# Expression refers to the title which currently shows the equation of the graph.
+plot(x, y, type = "b", col = "purple", pch = 20,
+     main = expression(y == 2^x),
+     xlab = "x", ylab = "y")
+
+# Adds grid lines to the graph for clarity
+grid()
+
+
+```
+
