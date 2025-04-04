@@ -4,7 +4,7 @@ author: Jino Surendra
 output:
   pdf_document: default
   html_document: default
-date: "2025-04-03"
+date: "2025-03-03"
 ---
 
 ```{r setup, include=FALSE}
@@ -62,7 +62,7 @@ WizKid | Songwriter for First Song to Reach 1,000,000,000 Streams on Spotify
 
 # A Chunk of Code
 
-```{r demonstration of equations, results="hide"}
+```{r demonstration of equations}
 
 # Below is a chunk of code that plots out a graph of y = 2^x.
 
