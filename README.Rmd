@@ -11,12 +11,15 @@ knitr::opts_chunk$set(
 )
 ```
 
+
 # GIS Shadowing Program
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of GIS_Shadowing_Program is to save some progress in the GSS program.
+The goal of GIS_Shadowing_Program is to save some progress in the GSS program. Keep track of somthing.
+
+
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
